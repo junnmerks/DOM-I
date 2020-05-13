@@ -52,3 +52,6 @@ let navItem1 = document.createElement("nav-item-1");
 navItem1.textContent = "Services";
 document.getElementsByTagName("nav a");
 let a = document.createElement("Services");
+
+const heroImg = document.querySelector(".cta-img");
+heroImg.setAttribute("src", "header-img.png");
