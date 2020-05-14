@@ -46,12 +46,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-document.getElementsByTagName("nav");
-document.getElementsByTagName("nav a");
-let navItem1 = document.createElement("nav-item-1");
-navItem1.textContent = "Services";
-document.getElementsByTagName("nav a");
-let a = document.createElement("Services");
+const heroImg = document
+  .querySelector("#cta-img")
+  .setAttribute("src", "./img/header-img.png");
 
-const heroImg = document.querySelector(".cta-img");
-heroImg.setAttribute("src", "header-img.png");
+let navItem = siteContent.nav;
+for (let value in navItem) {
+  console.log(value);
+}
+
+const titleHeader = document.getElementsByClassName("cta-text.h1");
+titleHeader.textContent = "DOM Is Awesome";
+
+const newTitle = document.getElementsByTagName("h1");
+newTitle.textContent = "DOM is Awesome";
