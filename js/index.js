@@ -17,16 +17,20 @@ const siteContent = {
     "features-h4": "Features",
     "features-content":
       "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "about-h4": "About",
     "about-content":
       "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
+
     "services-h4": "Services",
     "services-content":
       "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "product-h4": "Product",
     "product-content":
       "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+
     "vision-h4": "Vision",
     "vision-content":
       "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -60,7 +64,7 @@ anchor[3].textContent = navItem["nav-item-4"];
 anchor[4].textContent = navItem["nav-item-5"];
 anchor[5].textContent = navItem["nav-item-6"];
 
-console.log(anchor);
+// console.log(anchor);
 //const titleHeader = document.getElementsByClassName("cta-text.h1");
 //titleHeader.textContent = "DOM Is Awesome";
 
@@ -80,3 +84,40 @@ btn.textContent = siteContent.cta.button;
 let ctaText = document.querySelector(".cta-text");
 ctaText.style.display = "flex";
 ctaText.style.alignContent = "center";
+
+// let mContent = document.querySelector(".text-content h4");
+// mContent.textContent = siteContent.mainContent["features-h4"];
+
+// let fContent = document.querySelector(".text-content p");
+// fContent.textContent = siteContent.mainContent["features-content"];
+// fContent.style.width = "48%";
+
+// let textContent2 = document.createElement("h4");
+// textContent2.textContent = siteContent.mainContent["about - h4"];
+// fContent.appendChild =
+
+let aSubTitle = document.querySelectorAll(".text-content h4");
+
+aSubTitle[0].textContent = siteContent.mainContent["features-h4"];
+aSubTitle[1].textContent = siteContent.mainContent["about-h4"];
+aSubTitle[2].textContent = siteContent.mainContent["services-h4"];
+aSubTitle[3].textContent = siteContent.mainContent["product-h4"];
+aSubTitle[4].textContent = siteContent.mainContent["vision-h4"];
+
+let paragraph = document.querySelectorAll(".text-content p");
+
+paragraph[0].textContent = siteContent.mainContent["features-content"];
+paragraph[1].textContent = siteContent.mainContent["about-content"];
+paragraph[2].textContent = siteContent.mainContent["services-content"];
+paragraph[3].textContent = siteContent.mainContent["product-content"];
+paragraph[4].textContent = siteContent.mainContent["vision-content"];
+
+console.log(paragraph[1]);
+
+const midImage = document
+  .querySelector(".middle-img")
+  .setAttribute("src", "./img/mid-page-accent.jpg");
+
+let fContent = document.querySelector(".text-content p");
+fContent.textContent = siteContent.mainContent["features-content"];
+fContent.style.width = "90%";
