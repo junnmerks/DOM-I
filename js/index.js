@@ -13,7 +13,7 @@ const siteContent = {
     button: "Get Started",
     "img-src": "img/header-img.png",
   },
-  "main-content": {
+  mainContent: {
     "features-h4": "Features",
     "features-content":
       "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
@@ -51,12 +51,32 @@ const heroImg = document
   .setAttribute("src", "./img/header-img.png");
 
 let navItem = siteContent.nav;
-for (let value in navItem) {
-  console.log(value);
-}
 
-const titleHeader = document.getElementsByClassName("cta-text.h1");
-titleHeader.textContent = "DOM Is Awesome";
+let anchor = document.querySelectorAll("nav a");
+anchor[0].textContent = navItem["nav-item-1"];
+anchor[1].textContent = navItem["nav-item-2"];
+anchor[2].textContent = navItem["nav-item-3"];
+anchor[3].textContent = navItem["nav-item-4"];
+anchor[4].textContent = navItem["nav-item-5"];
+anchor[5].textContent = navItem["nav-item-6"];
 
-const newTitle = document.getElementsByTagName("h1");
-newTitle.textContent = "DOM is Awesome";
+console.log(anchor);
+//const titleHeader = document.getElementsByClassName("cta-text.h1");
+//titleHeader.textContent = "DOM Is Awesome";
+
+//const newTitle = (document.getElementsByTagName("h1").textContent =
+//  "DOM is Awesome");
+
+let newTitle = document.querySelector(".cta-text h1");
+newTitle.textContent = siteContent.cta.h1;
+newTitle.style.fontSize = "3.2rem";
+newTitle.style.alignItems = "center";
+newTitle.style.flexDirection = "column";
+newTitle.style.width = "40%";
+
+let btn = document.querySelector(".cta-text button");
+btn.textContent = siteContent.cta.button;
+
+let ctaText = document.querySelector(".cta-text");
+ctaText.style.display = "flex";
+ctaText.style.alignContent = "center";
