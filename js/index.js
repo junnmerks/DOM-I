@@ -73,17 +73,11 @@ anchor[5].textContent = navItem["nav-item-6"];
 
 let newTitle = document.querySelector(".cta-text h1");
 newTitle.textContent = siteContent.cta.h1;
-newTitle.style.fontSize = "3.2rem";
-newTitle.style.alignItems = "center";
-newTitle.style.flexDirection = "column";
+newTitle.style.fontSize = "4.2rem";
 newTitle.style.width = "40%";
 
 let btn = document.querySelector(".cta-text button");
 btn.textContent = siteContent.cta.button;
-
-let ctaText = document.querySelector(".cta-text");
-ctaText.style.display = "flex";
-ctaText.style.alignContent = "center";
 
 // let mContent = document.querySelector(".text-content h4");
 // mContent.textContent = siteContent.mainContent["features-h4"];
@@ -118,6 +112,14 @@ const midImage = document
   .querySelector(".middle-img")
   .setAttribute("src", "./img/mid-page-accent.jpg");
 
-let fContent = document.querySelector(".text-content p");
-fContent.textContent = siteContent.mainContent["features-content"];
-fContent.style.width = "90%";
+let tContact = document.querySelector(".contact h4");
+tContact.textContent = siteContent.contact["contact-h4"];
+
+let contactDetails = document.querySelectorAll(".contact p");
+
+contactDetails[0].textContent = siteContent.contact.address;
+contactDetails[1].textContent = siteContent.contact.phone;
+contactDetails[2].textContent = siteContent.contact.email;
+
+let fContent = document.querySelector("footer");
+fContent.textContent = siteContent.footer.copyright;
